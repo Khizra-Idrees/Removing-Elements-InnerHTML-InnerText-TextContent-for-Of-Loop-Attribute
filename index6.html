@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Assignment 06</h1>
+    <h2>InnerHTML Innertext and TextContent | And Differences</h2>
+
+    <script>
+        // Add content using innerHTML innertext and text content property of element 
+        // And tell the differences between them
+
+        var innerHtml = document.createElement("p");
+        document.body.appendChild(innerHtml);
+        // in innerHTML we can add element 
+        innerHtml.innerHTML = "This is Inner HTML";
+
+        var innerText = document.createElement("p");
+        document.body.appendChild(innerText);
+        // We can't add elements to inner text.. if we add element then this element prints as same as
+        // innertext treat element as a text
+        // innerText is not show the extra space
+        innerText.innerText = "This is    Inner    text";
+        console.log(innerText.innerText = "This is    Inner    text");
+
+        var textContent = document.createElement("p");
+        document.body.appendChild(textContent);
+        // We can't add elements to text content.. if we add element then this element prints as same as
+        // textContent treat element as a text
+        // textContent is show the extra space
+        textContent.textContent = "This is    Text    Content";
+        console.log(textContent.textContent = "This is    Text    Content");
+    </script>
+</body>
+</html>

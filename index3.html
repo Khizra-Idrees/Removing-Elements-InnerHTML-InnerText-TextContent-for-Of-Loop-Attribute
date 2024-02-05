@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Assignment 03</h1>
+    <h2>Retrieving Attributes of an Image Element</h2>
+
+    <img src="car.jpg" alt="CAR" style="width: 34%; height: 300px;">
+    <script>
+        // - Further enhance your HTML page by adding an image element (`<img>`).
+        // - Use JavaScript to retrieve and log to the console:
+        // - All attributes of the image element.
+        // - Specifically, the value of the `src` attribute.
+
+        var img = document.body.childNodes[5];
+
+        console.log(document.body.childNodes);
+        console.log(img.attributes);
+        console.log(img.src);
+    </script>
+</body>
+</html>

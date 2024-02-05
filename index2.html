@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Assignment 02</h1>
+    <h2>Adding and Removing List Items with Delay</h2>
+    <ul></ul>
+    
+    <script>
+        // Assignment 02
+
+// - Extend your HTML page to include an unordered list (`<ul>`).
+// - Dynamically add five list items (`<li>`) to the unordered list, each with unique content.
+// - Implement a function to remove the list items sequentially with delays. The first list item should be removed after 2 seconds, the second after 5 seconds, the third after 8 seconds, the fourth after 11 seconds, and the fifth after 14 seconds. Utilize the `removeChild` method for removal.
+
+function addListItems() {
+var ulList = document.body.childNodes[5];
+
+    // Add five list items with unique content
+    var itemContent = ['AUDI' , 'ROLLS-ROYCE' , 'RANGE ROVER' , 'PORSCHE' , 'MERCEDES']
+    for (var i = 0; i < itemContent.length; i++) {
+        var liItem = document.createElement('li');
+        liItem.textContent = itemContent[i];
+        ulList.appendChild(liItem);
+    }
+}
+
+
+addListItems()
+
+function removeElement(){
+    document.body.childNodes[5].childNodes[0].remove();
+}
+setTimeout(removeElement,3000);
+setTimeout(removeElement,6000);
+setTimeout(removeElement,8000);
+setTimeout(removeElement,10000);
+setTimeout(removeElement,12000);
+
+
+
+
+
+
+
+
+
+
+
+
+
+// var ul = document.body.childNodes[1];
+// var li = document.createElement("li");
+// var liContent = document.createTextNode("list 1");
+// li.appendChild(liContent);
+// ul.appendChild(li);
+    // var element = document.body.childNodes(5);
+    // var li = document.createElement("li");
+    // element.appendChild(li);
+    // li.innerHTML = "<li>WATCH</li> <br> <li>WALLET</li> <br> <li>GUN</li> <br> <li>PHONE</li>";
+    </script>
+</body>
+</html>
